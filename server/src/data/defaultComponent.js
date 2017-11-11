@@ -8,8 +8,8 @@ const defaultComponent = {
         backgroundColor: 'white',
         font: {
             weight: 0, // -1, 0, or 1
-            oblique: true,
-            underline: true,
+            oblique: false,
+            underline: false,
         },
     },
 };

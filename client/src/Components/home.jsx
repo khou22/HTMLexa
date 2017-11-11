@@ -5,17 +5,34 @@ import '../Styles/main.scss';
 
 import map from './map.js'; // Dictionary for string to JSX components
 
-class Main extends Component {
+class Home extends Component {
     render() {
+        const {
+            primaryColor,
+            componentData,
+        } = this.props;
+
+        const componentNodes = componentData.map((component) => {
+            const {
+                type,
+                id,
+                content,
+                description,
+            } = component;
+            return map(type, id, content, description);
+        });
+
         return (
             <div>
-                Hello, World.
+                {componentNodes}
             </div>
         );
     }
 }
 
-Main.propTypes = {
+Home.propTypes = {
+    primaryColor: PropTypes.string.isRequired,
+    componentData: PropTypes.array.isRequired,
 };
 
-export default Main;
+export default Home;

@@ -3,6 +3,7 @@ const util = require('util'); // Printing nested objects
 
 // The current data schema
 import schema from '../data/schema';
+import sampleSchemaData from '../data/sampleSchema'; // For development purposes
 
 // Helper functions
 import {
@@ -13,6 +14,10 @@ export const getSchema = (req, res) => {
     res.status(200).send(schema);
 };
 
+// For hardcoded scheme
+export const sampleSchema = (req, res) => {
+    res. status(200).send(sampleSchemaData);
+};
 
 export const updateSchema = async (req, res) => {
     console.log(req.body);

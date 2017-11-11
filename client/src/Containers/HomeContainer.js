@@ -8,6 +8,9 @@ import HomeComponent from '../Components/home.jsx';
 
 // Map the redux states to props
 const mapStateToProps = (state) => ({
+    // Globals
+    primaryColor: state.home.primaryColor,
+
     componentData: state.home.componentData,
 });
 
