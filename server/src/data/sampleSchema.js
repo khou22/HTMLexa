@@ -7,6 +7,24 @@ export default {
     },
     components: [
         {
+            type: 'banner',
+            id: 'banner-1',
+            content: 'Hello, World.',
+            description: {
+                textColor: 'default',
+                size: 0,
+                backgroundColor: 'white',
+                font: {
+                    weight: 0,
+                    oblique: false,
+                    underline: false,
+                },
+
+                // Specific to Button
+                link: 'https://www.princeton.edu/sites/default/files/images/2017/06/20060425_NassauHall_JJ_IMG_5973.jpg',
+            },
+        },
+        {
             type: 'title',
             id: 'title-1',
             content: 'I am a title',

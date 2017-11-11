@@ -28,8 +28,6 @@ export const emptyScreen = (req, res) => {
 };
 
 export const updateSchema = async (req, res) => {
-    console.log(req);
-
     const data = {
         ...schema,
         ...req.body,
