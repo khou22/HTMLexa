@@ -28,7 +28,7 @@ export const emptyScreen = (req, res) => {
 };
 
 export const updateSchema = async (req, res) => {
-    console.log(req.body);
+    console.log(req);
 
     const data = {
         ...schema,
@@ -42,7 +42,7 @@ export const updateSchema = async (req, res) => {
 
     if (response.success) {
         // The file was saved properly
-        res.status(200).send(response.contents);
+        res.status(200).send(response);
     } else {
         // File wasn't saved correctly
         res.status(500).send(response);
