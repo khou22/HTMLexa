@@ -10,7 +10,7 @@ const MainReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.ACTION_ERROR:
             return state;
-        case types.END_LOADING:
+        case types.RECEIVED_COMPONENTS:
             return {
                 ...state,
                 loadingScreen: false, // Turn off loading screen

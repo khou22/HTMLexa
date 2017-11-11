@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import '../Styles/main.scss';
 
-// import map from './map.js'; // Dictionary for string to JSX components
+import map from './map.js'; // Dictionary for string to JSX components
 
 class Main extends Component {
     render() {

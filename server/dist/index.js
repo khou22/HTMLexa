@@ -141,7 +141,7 @@ eval("module.exports = require(\"express-http-to-https\");//# sourceURL=[module]
 /* 12 */
 /***/ (function(module, exports) {
 
-eval("Object.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports[\"default\"] = {};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTIuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc2VydmVyL3NyYy9kYXRhL3NjaGVtYS5qcz8xMzE0Il0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcblxufTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzZXJ2ZXIvc3JjL2RhdGEvc2NoZW1hLmpzIl0sIm1hcHBpbmdzIjoiOzs7QUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///12\n");
+eval("Object.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports['default'] = {\n    defaults: {\n        primaryColor: '#3286A8'\n    },\n    components: [{\n        type: 'navigation-bar',\n        options: {}\n    }]\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTIuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc2VydmVyL3NyYy9kYXRhL3NjaGVtYS5qcz8xMzE0Il0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcbiAgICBkZWZhdWx0czoge1xuICAgICAgICBwcmltYXJ5Q29sb3I6ICcjMzI4NkE4JyxcbiAgICB9LFxuICAgIGNvbXBvbmVudHM6IFtcbiAgICAgICAge1xuICAgICAgICAgICAgdHlwZTogJ25hdmlnYXRpb24tYmFyJyxcbiAgICAgICAgICAgIG9wdGlvbnM6IHtcblxuICAgICAgICAgICAgfSxcbiAgICAgICAgfSxcbiAgICBdLFxufTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzZXJ2ZXIvc3JjL2RhdGEvc2NoZW1hLmpzIl0sIm1hcHBpbmdzIjoiOzs7QUFBQTtBQUNBO0FBQ0E7QUFEQTtBQUdBO0FBRUE7QUFDQTtBQUZBO0FBTEEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///12\n");
 
 /***/ })
 /******/ ])));

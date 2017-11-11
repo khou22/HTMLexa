@@ -7,15 +7,21 @@ import PropTypes from 'prop-types'; // For prop validation
 import Home from '../Containers/HomeContainer.js';
 
 // Loading Screen
-// import LoadingScreen from '../Components/loading/index.jsx';
+import LoadingScreen from '../Components/loading/index.jsx';
 
 class MainRouter extends Component {
     render() {
-        // const { loadingScreen } = this.props;
+        const { loadingScreen } = this.props;
         return (
             <div>
                 {/* <NavBar history={history} loggedIn={loggedIn} user={currentUser} /> */}
                 <Route exact path="*" component={Home} />
+
+                { loadingScreen ?
+                    <LoadingScreen />
+                    :
+                    <span data-note="Not loading" />
+                }
             </div>
         );
     }

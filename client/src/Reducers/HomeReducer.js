@@ -1,7 +1,8 @@
 import * as types from '../Constants/MainActionTypes';
 
 const initialState = {
-    componentData: [], // Printer data
+    primaryColor: '#3286A8', // Default color
+    componentData: [], // Component data
 };
 
 const HomeReducer = (state = initialState, action) => {

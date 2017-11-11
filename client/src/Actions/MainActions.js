@@ -9,8 +9,8 @@ const actionError = (error) => ({
 
 // Parse the component data into Redux
 const receivedComponents = (json) => ({
-    type: types.RECIEVED_PRINTERS,
-    componentData: json,
+    type: types.RECEIVED_COMPONENTS,
+    componentData: json.components,
 });
 
 export const getComponents = () => {
