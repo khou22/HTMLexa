@@ -3,6 +3,8 @@ import React from 'react';
 import NavigationBar from './NavigationBar/index.jsx';
 import Paragraph from './Paragraph/index.jsx';
 import Title from './Title/index.jsx';
+import Button from './Button/index.jsx';
+import Image from './Image/index.jsx';
 
 // Map the data to a component with props
 const createComponent = (type, id, content, description) => {
@@ -28,6 +30,24 @@ const createComponent = (type, id, content, description) => {
         case 'title':
             return (
                 <Title
+                    id={id}
+                    content={content}
+                    description={description}
+                />
+            );
+
+        case 'image':
+            return (
+                <Image
+                    id={id}
+                    content={content}
+                    description={description}
+                />
+            );
+
+        case 'button':
+            return (
+                <Button
                     id={id}
                     content={content}
                     description={description}

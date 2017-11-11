@@ -26,7 +26,7 @@ export const getComponents = () => {
     // Returning a promise allows you to use the 'dispatch' function in the child scope
     return (dispatch) => {
         // Return the contents of the fetch promise
-        return fetch(testEmpty, { // See watwg-fetch for docs
+        return fetch(testURL, { // See watwg-fetch for docs
             credentials: 'same-origin', // If same origin
         }).then(response => response.json()) // Parse response
         .then(json => {

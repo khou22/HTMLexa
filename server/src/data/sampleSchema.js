@@ -2,6 +2,7 @@
 // Hard coded for testing purposes
 export default {
     defaults: {
+        title: 'My Website',
         primaryColor: '#3286A8',
     },
     components: [
@@ -33,6 +34,69 @@ export default {
                     oblique: false,
                     underline: false,
                 },
+            },
+        },
+        {
+            type: 'image',
+            id: 'image-1',
+            content: 'https://www.princeton.edu/sites/default/files/images/2017/06/20060425_NassauHall_JJ_IMG_5973.jpg',
+            description: {
+                textColor: 'default',
+                size: -1,
+                backgroundColor: 'white',
+                font: {
+                    weight: 0,
+                    oblique: false,
+                    underline: false,
+                },
+            },
+        },
+        {
+            type: 'image',
+            id: 'image-2',
+            content: 'https://www.princeton.edu/sites/default/files/images/2017/06/20060425_NassauHall_JJ_IMG_5973.jpg',
+            description: {
+                textColor: 'default',
+                size: 0,
+                backgroundColor: 'white',
+                font: {
+                    weight: 0,
+                    oblique: false,
+                    underline: false,
+                },
+            },
+        },
+        {
+            type: 'image',
+            id: 'image-3',
+            content: 'https://www.princeton.edu/sites/default/files/images/2017/06/20060425_NassauHall_JJ_IMG_5973.jpg',
+            description: {
+                textColor: 'default',
+                size: 1,
+                backgroundColor: 'white',
+                font: {
+                    weight: 0,
+                    oblique: false,
+                    underline: false,
+                },
+            },
+        },
+        {
+            type: 'button',
+            id: 'button-1',
+            content: 'Button',
+            description: {
+                textColor: 'default',
+                size: 0,
+                backgroundColor: 'white',
+                font: {
+                    weight: 0,
+                    oblique: false,
+                    underline: false,
+                },
+
+                // Specific to Button
+                link: 'https://www.princeton.edu/sites/default/files/images/2017/06/20060425_NassauHall_JJ_IMG_5973.jpg',
             },
         },
     ],
