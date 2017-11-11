@@ -1,5 +1,5 @@
-import { test } from '../controllers';
+import { getSchema } from '../controllers';
 
 export default (app) => {
-    app.get('/api/test', test);
+    app.get('/api/components', getSchema);
 };

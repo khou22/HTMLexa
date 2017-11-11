@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khou22/htmlexa"
+    "url": "https://github.com/khou22/HTMLexa"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",

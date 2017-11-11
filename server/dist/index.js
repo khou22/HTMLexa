@@ -105,13 +105,13 @@ eval("Object.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\n
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("Object.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _controllers = __webpack_require__(7);\n\nexports['default'] = function (app) {\n    app.get('/api/test', _controllers.test);\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zZXJ2ZXIvc3JjL3JvdXRlcy9hcGlSb3V0ZXMuanM/MDRkNiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB0ZXN0IH0gZnJvbSAnLi4vY29udHJvbGxlcnMnO1xuXG5leHBvcnQgZGVmYXVsdCAoYXBwKSA9PiB7XG4gICAgYXBwLmdldCgnL2FwaS90ZXN0JywgdGVzdCk7XG59O1xuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNlcnZlci9zcmMvcm91dGVzL2FwaVJvdXRlcy5qcyJdLCJtYXBwaW5ncyI6Ijs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///6\n");
+eval("Object.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _controllers = __webpack_require__(7);\n\nexports['default'] = function (app) {\n    app.get('/api/components', _controllers.getSchema);\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zZXJ2ZXIvc3JjL3JvdXRlcy9hcGlSb3V0ZXMuanM/MDRkNiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBnZXRTY2hlbWEgfSBmcm9tICcuLi9jb250cm9sbGVycyc7XG5cbmV4cG9ydCBkZWZhdWx0IChhcHApID0+IHtcbiAgICBhcHAuZ2V0KCcvYXBpL2NvbXBvbmVudHMnLCBnZXRTY2hlbWEpO1xufTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzZXJ2ZXIvc3JjL3JvdXRlcy9hcGlSb3V0ZXMuanMiXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///6\n");
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("Object.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar test = exports.test = function test(req, res) {\n    res.status(200).send('Hello');\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zZXJ2ZXIvc3JjL2NvbnRyb2xsZXJzL2luZGV4LmpzP2Q0OGQiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IHRlc3QgPSAocmVxLCByZXMpID0+IHtcbiAgICByZXMuc3RhdHVzKDIwMCkuc2VuZCgnSGVsbG8nKTtcbn07XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gc2VydmVyL3NyYy9jb250cm9sbGVycy9pbmRleC5qcyJdLCJtYXBwaW5ncyI6Ijs7O0FBQUE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///7\n");
+eval("Object.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.getSchema = undefined;\n\nvar _schema = __webpack_require__(12);\n\nvar _schema2 = _interopRequireDefault(_schema);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }\n\nvar getSchema = exports.getSchema = function getSchema(req, res) {\n    res.status(200).send(_schema2['default']);\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zZXJ2ZXIvc3JjL2NvbnRyb2xsZXJzL2luZGV4LmpzP2Q0OGQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHNjaGVtYSBmcm9tICcuLi9kYXRhL3NjaGVtYSc7XG5cbmV4cG9ydCBjb25zdCBnZXRTY2hlbWEgPSAocmVxLCByZXMpID0+IHtcbiAgICByZXMuc3RhdHVzKDIwMCkuc2VuZChzY2hlbWEpO1xufTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzZXJ2ZXIvc3JjL2NvbnRyb2xsZXJzL2luZGV4LmpzIl0sIm1hcHBpbmdzIjoiOzs7OztBQUFBO0FBQ0E7Ozs7O0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///7\n");
 
 /***/ }),
 /* 8 */
@@ -136,6 +136,12 @@ eval("module.exports = require(\"body-parser\");//# sourceURL=[module]\n//# sour
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"express-http-to-https\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTEuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJleHByZXNzLWh0dHAtdG8taHR0cHNcIj9hZmE0Il0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcImV4cHJlc3MtaHR0cC10by1odHRwc1wiKTtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyBleHRlcm5hbCBcImV4cHJlc3MtaHR0cC10by1odHRwc1wiXG4vLyBtb2R1bGUgaWQgPSAxMVxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///11\n");
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports[\"default\"] = {};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTIuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc2VydmVyL3NyYy9kYXRhL3NjaGVtYS5qcz8xMzE0Il0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcblxufTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzZXJ2ZXIvc3JjL2RhdGEvc2NoZW1hLmpzIl0sIm1hcHBpbmdzIjoiOzs7QUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///12\n");
 
 /***/ })
 /******/ ])));
