@@ -4,10 +4,10 @@ const defaultComponent = {
     content: '', // Inner HTML
     description: {
         textColor: 'default',
-        size: 'normal',
+        size: 0, // -1, 0, or 1
         backgroundColor: 'white',
         font: {
-            weight: 'normal',
+            weight: 0, // -1, 0, or 1
             oblique: true,
             underline: true,
         },
