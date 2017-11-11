@@ -1,5 +1,6 @@
 const path = require('path'); // File path resolution
 const util = require('util'); // Printing nested objects
+const fetchUrl = require("fetch").fetchUrl; // For fetch requests
 
 // The current data schema
 import schema from '../data/schema';
@@ -14,7 +15,18 @@ import {
 } from './helpers.js';
 
 export const getSchema = (req, res) => {
-    res.status(200).send(schema);
+    const url = 'https://s3.amazonaws.com/htmlexa/schema.json';
+
+    // source file is iso-8859-15 but it is converted to utf-8 automatically
+    fetchUrl(url, function(error, meta, body){
+        // console.log(body.toString());
+        const json = JSON.parse(body.toString()); // Parse into JSON
+        if (json != null) { // JSON parsed
+            res.status(200).send(json);
+        } else { // JSON was unsuccessful
+            res.status(500).send(body.toString()); // JSON failed, so send source
+        }
+    });
 };
 
 // For hardcoded scheme
@@ -46,4 +58,3 @@ export const updateSchema = async (req, res) => {
         res.status(500).send(response);
     }
 };
-
