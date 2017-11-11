@@ -1,0 +1,8 @@
+{
+  "name": "HTMLexa",
+  "description": "Create website using Alexa",
+  "repository": "https://github.com/khou22/HTMLexa",
+  "logo": "",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
