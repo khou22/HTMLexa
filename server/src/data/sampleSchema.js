@@ -55,6 +55,36 @@ export default {
             },
         },
         {
+            type: 'paragraph',
+            id: 'paragraph-2',
+            content: 'Lorem ipsum dolor sit amet. (Heavy font)',
+            description: {
+                textColor: '#3286A8',
+                size: 0,
+                backgroundColor: '#EEE',
+                font: {
+                    weight: 1,
+                    oblique: false,
+                    underline: false,
+                },
+            },
+        },
+        {
+            type: 'paragraph',
+            id: 'paragraph-3',
+            content: 'Lorem ipsum dolor sit amet.',
+            description: {
+                textColor: 'default',
+                size: 0,
+                backgroundColor: 'white',
+                font: {
+                    weight: -1,
+                    oblique: true,
+                    underline: true,
+                },
+            },
+        },
+        {
             type: 'image',
             id: 'image-1',
             content: 'https://www.princeton.edu/sites/default/files/images/2017/06/20060425_NassauHall_JJ_IMG_5973.jpg',

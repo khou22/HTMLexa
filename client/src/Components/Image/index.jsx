@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-import { sizeToClass } from '../../Actions/HelperActions.js';
+// Helper functions to standardize styling
+import { sizeToClass, buildStyle } from '../../Actions/HelperActions.js';
 
 const image = (props) => {
     const sizeStr = sizeToClass(props.description.size);
     const customClass = `image image-${sizeStr}`;
     return (
-        <img className={customClass} id={props.id} src={props.content} />
+        <img className={customClass} id={props.id} src={props.content} style={buildStyle(props.description)} />
     );
 }
 

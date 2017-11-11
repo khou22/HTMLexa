@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Helper functions to standardize styling
+import { buildStyle } from '../../Actions/HelperActions.js';
+
 import './style.scss';
 
 const paragraph = (props) => (
-    <p id={props.id}>
+    <p className="paragraph" id={props.id} style={buildStyle(props.description)}>
         {props.content}
     </p>
 )

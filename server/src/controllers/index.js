@@ -1,6 +1,6 @@
 const path = require('path'); // File path resolution
 const util = require('util'); // Printing nested objects
-const fetchUrl = require("fetch").fetchUrl; // For fetch requests
+const fetchUrl = require('fetch').fetchUrl; // For fetch requests
 
 // The current data schema
 import schema from '../data/schema';
@@ -18,7 +18,7 @@ export const getSchema = (req, res) => {
     const url = 'https://s3.amazonaws.com/htmlexa/schema.json';
 
     // source file is iso-8859-15 but it is converted to utf-8 automatically
-    fetchUrl(url, function(error, meta, body){
+    fetchUrl(url, (error, meta, body) => {
         // console.log(body.toString());
         const json = JSON.parse(body.toString()); // Parse into JSON
         if (json != null) { // JSON parsed
@@ -31,30 +31,10 @@ export const getSchema = (req, res) => {
 
 // For hardcoded scheme
 export const sampleSchema = (req, res) => {
-    res. status(200).send(sampleSchemaData);
+    res.status(200).send(sampleSchemaData);
 };
 
 // For hardcoded scheme
 export const emptyScreen = (req, res) => {
-    res. status(200).send(emptySchemaData);
-};
-
-export const updateSchema = async (req, res) => {
-    const data = {
-        ...schema,
-        ...req.body,
-    };
-
-    const filepath = path.resolve(__dirname, '../data/schemaTest.js');
-    const contents = `export default ${util.inspect(data, false, null)}`;
-
-    const response = await writeFile(filepath, contents);
-
-    if (response.success) {
-        // The file was saved properly
-        res.status(200).send(response);
-    } else {
-        // File wasn't saved correctly
-        res.status(500).send(response);
-    }
+    res.status(200).send(emptySchemaData);
 };

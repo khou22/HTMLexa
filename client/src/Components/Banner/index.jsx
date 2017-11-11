@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Helper functions to standardize styling
+import { buildStyle } from '../../Actions/HelperActions.js';
+
 import './style.scss';
 
 const banner = (props) => {
@@ -8,7 +11,7 @@ const banner = (props) => {
         "background-image": `url(${props.description.link})`,
     };
     return (
-        <div className="banner" id={props.id}>
+        <div className="banner" id={props.id} style={buildStyle(props.description)}>
             <div className="banner-background" style={backgroundImage} />
             <div className="banner-content">
                 <h1>{props.content}</h1>

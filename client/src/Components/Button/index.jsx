@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// Helper functions to standardize styling
+import { buildStyle, sizeToClass } from '../../Actions/HelperActions.js';
+
 import './style.scss';
 
 class Button extends Component {
@@ -16,8 +19,24 @@ class Button extends Component {
             description,
         } = this.props;
 
+        const className = `button button-${sizeToClass(description.size)}`;
+
+        // Set the color of the font to the background, set font to white
+        let backgroundColor = description.textColor;
+        if (backgroundColor == 'default') backgroundColor = 'gray'; // Set the default to gray
+        const fontColor = description.backgroundColor;
+
+        // Swap the values
+        description.textColor = backgroundColor;
+        description.backgroundColor = fontColor;
+
+        const style = buildStyle(description); // Build the style object
+
+        // Add border to the button
+        style.borderColor = description.textColor;
+
         return (
-            <button id={id} onClick={() => this.openLink()}>
+            <button className={className} id={id} onClick={() => this.openLink()} style={style}>
                 {content}
             </button>
         );
