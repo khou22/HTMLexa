@@ -35,7 +35,14 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-    primaryColor: PropTypes.string.isRequired,
+    // Defaults
+    defaultColors: PropTypes.shape({
+        primary: PropTypes.string.isRequired,
+        lighter: PropTypes.string.isRequired,
+        darker: PropTypes.string.isRequired,
+    }).isRequired,
+
+    // Component data
     componentData: PropTypes.array.isRequired,
 };
 

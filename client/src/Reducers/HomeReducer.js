@@ -1,7 +1,11 @@
 import * as types from '../Constants/MainActionTypes';
 
 const initialState = {
-    primaryColor: '#3286A8', // Default color
+    defaultColors: {
+        primary: '#5092DF',
+        lighter: '#90B9FD',
+        darker: '#495D7E',
+    },
     componentData: [], // Component data
 };
 
@@ -14,7 +18,11 @@ const HomeReducer = (state = initialState, action) => {
         case types.RECEIVED_COMPONENTS:
             return {
                 ...state,
-                primaryColor: action.primaryColor,
+                defaultColors: {
+                    primary: action.primaryColor,
+                    lighter: action.lighterColor,
+                    darker: action.darkerColor,
+                },
                 componentData: action.componentData,
             }
 

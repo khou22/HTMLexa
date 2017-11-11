@@ -3,7 +3,11 @@
 export default {
     defaults: {
         title: 'My Website',
-        primaryColor: '#3286A8',
+        defaultColors: {
+            primary: '#5092DF',
+            lighter: '#90B9FD',
+            darker: '#495D7E',
+        },
     },
     components: [
         {

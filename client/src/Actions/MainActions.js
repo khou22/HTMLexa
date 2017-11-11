@@ -12,7 +12,9 @@ const receivedData = (json) => ({
     type: types.RECEIVED_COMPONENTS,
 
     // Defaults
-    primaryColor: json.defaults.primaryColor,
+    primaryColor: json.defaults.defaultColors.primary,
+    lighterColor: json.defaults.defaultColors.lighter,
+    darkerColor: json.defaults.defaultColors.darker,
 
     // Array of component data
     componentData: json.components,
@@ -33,6 +35,9 @@ export const getComponents = () => {
             // console.log('Received printers data: ', json);
             // Load data into redux state
             dispatch(receivedData(json));
+
+            // Set the site title
+            document.title = json.defaults.title;
         })
         .catch(error => { // Catch any errors
             dispatch(actionError(error));
