@@ -15,6 +15,9 @@
     "type": "git",
     "url": "https://github.com/khou22/HTMLexa"
   },
+  "engines": {
+    "node": "8.6.0"
+  },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "body-parser": "^1.17.2",

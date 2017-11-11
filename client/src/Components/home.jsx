@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../Styles/main.scss';
-
+import EmptySite from './empty/index.jsx'; // Placeholder if no items on page
 import map from './map.js'; // Dictionary for string to JSX components
 
 class Home extends Component {
@@ -11,6 +10,11 @@ class Home extends Component {
             primaryColor,
             componentData,
         } = this.props;
+
+        // If no items, display the EmptySite component
+        if (componentData.length == 0) {
+            return <EmptySite />;
+        }
 
         const componentNodes = componentData.map((component) => {
             const {

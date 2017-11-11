@@ -1,3 +1,4 @@
+// Full sample website schema
 // Hard coded for testing purposes
 export default {
     defaults: {
