@@ -3,6 +3,7 @@ import React from 'react';
 import NavigationBar from './NavigationBar/index.jsx';
 import Paragraph from './Paragraph/index.jsx';
 import Title from './Title/index.jsx';
+import Subtitle from './Subtitle/index.jsx';
 import Button from './Button/index.jsx';
 import Image from './Image/index.jsx';
 import Banner from './Banner/index.jsx';
@@ -33,6 +34,16 @@ const createComponent = (type, id, content, column, description) => {
         case 'title':
             return (
                 <Title
+                    id={id}
+                    content={content}
+                    description={description}
+                    column={column}
+                />
+            );
+
+        case 'subtitle':
+            return (
+                <Subtitle
                     id={id}
                     content={content}
                     description={description}

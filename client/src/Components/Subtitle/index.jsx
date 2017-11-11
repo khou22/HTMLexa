@@ -7,12 +7,12 @@ import { buildStyle, columnToClass } from '../../Actions/HelperActions.js';
 import './style.scss';
 
 const title = (props) => {
-    const className = `title ${columnToClass(props.column)}`;
+    const className = `subtitle ${columnToClass(props.column)}`;
     return (
         <div className={className} id={props.id}>
-            <h1 style={buildStyle(props.description)}>
+            <h2 style={buildStyle(props.description)}>
                 {props.content}
-            </h1>
+            </h2>
         </div>
     );
 }
