@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Helper functions to standardize styling
-import { buildStyle, sizeToClass } from '../../Actions/HelperActions.js';
+import { buildStyle, sizeToClass, columnToClass } from '../../Actions/HelperActions.js';
 
 import './style.scss';
 
@@ -17,6 +17,7 @@ class Button extends Component {
             id,
             content,
             description,
+            column,
         } = this.props;
 
         const className = `button button-${sizeToClass(description.size)}`;
@@ -36,9 +37,11 @@ class Button extends Component {
         style.borderColor = description.textColor;
 
         return (
-            <button className={className} id={id} onClick={() => this.openLink()} style={style}>
-                {content}
-            </button>
+            <div className={columnToClass(column)} id={id}>
+                <button className={className} onClick={() => this.openLink()} style={style}>
+                    {content}
+                </button>
+            </div>
         );
     }
 }
@@ -47,6 +50,7 @@ Button.propTypes = {
     id: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     description: PropTypes.object.isRequired,
+    column: PropTypes.number.isRequired,
 };
 
 export default Button;

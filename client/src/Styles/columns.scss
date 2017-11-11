@@ -1,0 +1,16 @@
+.column {
+    &-full {
+        display: block;
+        width: 100%;
+    }
+
+    &-left {
+        float: left;
+        width: 50%;
+    }
+
+    &-right {
+        float: right;
+        width: 50%;
+    }
+}

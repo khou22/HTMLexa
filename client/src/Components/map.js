@@ -8,7 +8,7 @@ import Image from './Image/index.jsx';
 import Banner from './Banner/index.jsx';
 
 // Map the data to a component with props
-const createComponent = (type, id, content, description) => {
+const createComponent = (type, id, content, column, description) => {
     switch(type) {
         case 'navigationBar':
             return (
@@ -16,6 +16,7 @@ const createComponent = (type, id, content, description) => {
                     id={id}
                     content={content}
                     description={description}
+                    column={column}
                 />
             );
 
@@ -25,6 +26,7 @@ const createComponent = (type, id, content, description) => {
                     id={id}
                     content={content}
                     description={description}
+                    column={column}
                 />
             );
 
@@ -34,6 +36,7 @@ const createComponent = (type, id, content, description) => {
                     id={id}
                     content={content}
                     description={description}
+                    column={column}
                 />
             );
 
@@ -43,6 +46,7 @@ const createComponent = (type, id, content, description) => {
                     id={id}
                     content={content}
                     description={description}
+                    column={column}
                 />
             );
 
@@ -52,6 +56,7 @@ const createComponent = (type, id, content, description) => {
                     id={id}
                     content={content}
                     description={description}
+                    column={column}
                 />
             );
 
@@ -61,6 +66,7 @@ const createComponent = (type, id, content, description) => {
                     id={id}
                     content={content}
                     description={description}
+                    column={column}
                 />
             );
 

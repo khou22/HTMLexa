@@ -4,6 +4,12 @@ export const sizeToClass = (size) => {
     return 'normal';
 }
 
+export const columnToClass = (column) => {
+    if (column == 0) return 'column-full';
+    else if (column == 1) return 'column-left';
+    return 'column-right';
+}
+
 // Map a weight to a font-weight value (100...700)
 export const weightToValue = (weight) => {
     if (weight < 0) return 100;

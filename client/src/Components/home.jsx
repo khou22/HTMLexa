@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import EmptySite from './empty/index.jsx'; // Placeholder if no items on page
 import map from './map.js'; // Dictionary for string to JSX components
 
+// Import column styling
+import '../Styles/columns.scss';
+
 class Home extends Component {
     render() {
         const {
@@ -21,9 +24,10 @@ class Home extends Component {
                 type,
                 id,
                 content,
+                column,
                 description,
             } = component;
-            return map(type, id, content, description);
+            return map(type, id, content, column, description);
         });
 
         return (
