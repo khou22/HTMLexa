@@ -108,7 +108,7 @@ export default {
                 },
 
                 // Specific to Button
-                link: 'www.amazon.com',
+                link: 'https://www.amazon.com',
             },
         },
         {
