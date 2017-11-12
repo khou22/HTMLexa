@@ -1,7 +1,7 @@
 .banner {
     position: relative;
     width: 100vw;
-    height: 600px;
+    height: 500px;
 
     &-background {
         position: absolute;
@@ -16,8 +16,8 @@
         background-repeat: no-repeat;
 
         // Filtering
-        filter: saturate(0.8) opacity(0.8) brightness(130%) contrast(77%);
-        -webkit-filter: saturate(0.8) opacity(0.8) brightness(130%) contrast(77%);
+        // filter: saturate(0.8) opacity(0.8) brightness(130%) contrast(77%);
+        // -webkit-filter: saturate(0.8) opacity(0.8) brightness(130%) contrast(77%);
     }
 
     &-content {
