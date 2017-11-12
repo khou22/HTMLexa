@@ -22,7 +22,7 @@ const createComponent = (type, id, content, column, description, admin) => {
                 />
             );
 
-        case 'paragraph':
+        case 'Paragraph':
             return (
                 <Paragraph
                     id={id}
@@ -33,7 +33,7 @@ const createComponent = (type, id, content, column, description, admin) => {
                 />
             );
 
-        case 'title':
+        case 'Header':
             return (
                 <Title
                     id={id}
@@ -44,7 +44,7 @@ const createComponent = (type, id, content, column, description, admin) => {
                 />
             );
 
-        case 'subtitle':
+        case 'Subheader':
             return (
                 <Subtitle
                     id={id}
@@ -55,7 +55,7 @@ const createComponent = (type, id, content, column, description, admin) => {
                 />
             );
 
-        case 'image':
+        case 'Image':
             return (
                 <Image
                     id={id}
@@ -66,7 +66,18 @@ const createComponent = (type, id, content, column, description, admin) => {
                 />
             );
 
-        case 'button':
+        case 'Button':
+            return (
+                <Button
+                    id={id}
+                    content={content}
+                    description={description}
+                    column={column}
+                    admin={admin}
+                />
+            );
+
+        case 'Link':
             return (
                 <Button
                     id={id}
