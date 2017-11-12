@@ -29,8 +29,8 @@ export default {
             },
         },
         {
-            type: 'title',
-            id: 'title-1',
+            type: 'Header',
+            id: 'Header-1',
             content: 'Shop our latest collection for Fall 2017',
             column: 0,
             description: {
@@ -45,8 +45,8 @@ export default {
             },
         },
         {
-            type: 'image',
-            id: 'image-3',
+            type: 'Image',
+            id: 'Image-3',
             content: 'https://i.pinimg.com/originals/27/e0/3d/27e03d0713f447c6a150660e1516354c.jpg',
             column: 0,
             description: {
@@ -61,8 +61,8 @@ export default {
             },
         },
         {
-            type: 'title',
-            id: 'title-2',
+            type: 'Header',
+            id: 'Header-2',
             content: 'About',
             column: 0,
             description: {
@@ -77,8 +77,8 @@ export default {
             },
         },
         {
-            type: 'paragraph',
-            id: 'paragraph-1',
+            type: 'Paragraph',
+            id: 'Paragraph-1',
             content: 'Our new collection features work from popular minimalist designer Jill Sanders.',
             column: 0,
             description: {
@@ -93,8 +93,8 @@ export default {
             },
         },
         {
-            type: 'button',
-            id: 'button-1',
+            type: 'Button',
+            id: 'Button-1',
             content: 'More',
             column: 0,
             description: {
@@ -112,8 +112,8 @@ export default {
             },
         },
         {
-            type: 'image',
-            id: 'image-2',
+            type: 'Image',
+            id: 'Image-2',
             content: 'http://andesigns.us/wp-content/uploads/2016/08/minimal-white-chair.jpg',
             column: 0,
             description: {
@@ -128,8 +128,8 @@ export default {
             },
         },
         {
-            type: 'title',
-            id: 'title-3',
+            type: 'Header',
+            id: 'Header-3',
             content: 'Product',
             column: 0,
             description: {
@@ -144,8 +144,8 @@ export default {
             },
         },
         {
-            type: 'subtitle',
-            id: 'subtitle-2',
+            type: 'Subheader',
+            id: 'Subheader-2',
             content: 'COLLABORATION WITH JILL SANDERS',
             column: 0,
             description: {
@@ -160,8 +160,8 @@ export default {
             },
         },
         {
-            type: 'paragraph',
-            id: 'paragraph-2',
+            type: 'Paragraph',
+            id: 'Paragraph-2',
             content: 'This season’s collection focuses on the art of minimal furniture design. Our collection features work curated to show our users the best designs.',
             column: 0,
             description: {
