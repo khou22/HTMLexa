@@ -1,0 +1,31 @@
+.admin {
+    width: 100vw;
+    height: 30px;
+    
+    margin-top: -20px;
+    transition: margin 250ms;
+
+    // Animation on entrance
+    animation: hideAdmin 2s;
+
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+
+    // On hover, expose
+    &:hover {
+        margin-top: 0;
+    }
+}
+
+@keyframes hideAdmin {
+    0% {
+        margin-top: 0;
+    }
+    90% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: -20px;
+    }
+}

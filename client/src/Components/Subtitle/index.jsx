@@ -8,11 +8,12 @@ import './style.scss';
 
 const title = (props) => {
     const className = `subtitle ${columnToClass(props.column)}`;
+    const label = props.admin ? props.id : props.content.toUpperCase();
     return (
         <div className={className} id={props.id}>
-            <h2 style={buildStyle(props.description)}>
-                {props.content}
-            </h2>
+            <h3 style={buildStyle(props.description)}>
+                {label}
+            </h3>
         </div>
     );
 }
@@ -22,6 +23,8 @@ title.propTypes = {
     content: PropTypes.string.isRequired,
     description: PropTypes.object.isRequired,
     column: PropTypes.number.isRequired,
+
+    admin: PropTypes.bool.isRequired,
 };
 
 export default title;

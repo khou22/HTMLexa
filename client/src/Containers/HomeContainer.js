@@ -5,9 +5,13 @@ import { withRouter } from 'react-router-dom'
 import HomeComponent from '../Components/home.jsx';
 
 // Import actions you'd like to make usable to a component
+import { toggleAdminMode } from '../Actions/MainActions.js';
 
 // Map the redux states to props
 const mapStateToProps = (state) => ({
+    // Admin
+    admin: state.home.admin,
+
     // Globals
     primaryColor: state.home.primaryColor,
 
@@ -16,7 +20,9 @@ const mapStateToProps = (state) => ({
 
 // Map actions to props
 const mapDispatchToProps = (dispatch) => ({
-
+    toggleAdminMode: () => (
+        dispatch(toggleAdminMode())
+    ),
 });
 
 // Connects your component to the store using the previously defined functions

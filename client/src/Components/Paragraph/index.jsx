@@ -7,10 +7,11 @@ import { buildStyle, columnToClass } from '../../Actions/HelperActions.js';
 import './style.scss';
 
 const paragraph = (props) => {
+    const label = props.admin ? props.id : props.content;
     return (
         <div className={columnToClass(props.column)} id={props.id}>
             <p className="paragraph" style={buildStyle(props.description)}>
-                {props.content}
+                {label}
             </p>
         </div>
     );
@@ -21,6 +22,8 @@ paragraph.propTypes = {
     content: PropTypes.string.isRequired,
     description: PropTypes.object.isRequired,
     column: PropTypes.number.isRequired,
+
+    admin: PropTypes.bool.isRequired,
 };
 
 export default paragraph;

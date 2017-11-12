@@ -44,9 +44,17 @@ export const getComponents = () => {
         })
         .catch(error => { // Catch any errors
             // Prod not working
-            window.location = '/test'; // Redirect to working schema
+            setTimeout(() => {
+                // window.location = '/test'; // Redirect to working schema
+            }, 10000);
 
             dispatch(actionError(error));
         });
+    };
+}
+
+export const toggleAdminMode = () => {
+    return {
+        type: types.TOGGLE_ADMIN,
     };
 }

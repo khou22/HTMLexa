@@ -1,6 +1,7 @@
 import * as types from '../Constants/MainActionTypes';
 
 const initialState = {
+    admin: false, // Whether in admin mode
     defaultColors: {
         primary: '#5092DF',
         lighter: '#90B9FD',
@@ -24,6 +25,12 @@ const HomeReducer = (state = initialState, action) => {
                     darker: action.darkerColor,
                 },
                 componentData: action.componentData,
+            }
+
+        case types.TOGGLE_ADMIN:
+            return {
+                ...state,
+                admin: !state.admin, // Toggle
             }
 
         default: // Default, no state change

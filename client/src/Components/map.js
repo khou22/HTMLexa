@@ -9,7 +9,7 @@ import Image from './Image/index.jsx';
 import Banner from './Banner/index.jsx';
 
 // Map the data to a component with props
-const createComponent = (type, id, content, column, description) => {
+const createComponent = (type, id, content, column, description, admin) => {
     switch(type) {
         case 'navigationBar':
             return (
@@ -18,6 +18,7 @@ const createComponent = (type, id, content, column, description) => {
                     content={content}
                     description={description}
                     column={column}
+                    admin={admin}
                 />
             );
 
@@ -28,6 +29,7 @@ const createComponent = (type, id, content, column, description) => {
                     content={content}
                     description={description}
                     column={column}
+                    admin={admin}
                 />
             );
 
@@ -38,6 +40,7 @@ const createComponent = (type, id, content, column, description) => {
                     content={content}
                     description={description}
                     column={column}
+                    admin={admin}
                 />
             );
 
@@ -48,6 +51,7 @@ const createComponent = (type, id, content, column, description) => {
                     content={content}
                     description={description}
                     column={column}
+                    admin={admin}
                 />
             );
 
@@ -58,6 +62,7 @@ const createComponent = (type, id, content, column, description) => {
                     content={content}
                     description={description}
                     column={column}
+                    admin={admin}
                 />
             );
 
@@ -68,6 +73,7 @@ const createComponent = (type, id, content, column, description) => {
                     content={content}
                     description={description}
                     column={column}
+                    admin={admin}
                 />
             );
 
@@ -78,6 +84,7 @@ const createComponent = (type, id, content, column, description) => {
                     content={content}
                     description={description}
                     column={column}
+                    admin={admin}
                 />
             );
 

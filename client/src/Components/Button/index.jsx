@@ -18,6 +18,7 @@ class Button extends Component {
             content,
             description,
             column,
+            admin,
         } = this.props;
 
         const className = `button button-${sizeToClass(description.size)}`;
@@ -36,10 +37,11 @@ class Button extends Component {
         // Add border to the button
         style.borderColor = description.textColor;
 
+        const label = admin ? id : content;
         return (
             <div className={columnToClass(column)} id={id}>
                 <button className={className} onClick={() => this.openLink()} style={style}>
-                    {content}
+                    {label}
                 </button>
             </div>
         );
@@ -51,6 +53,8 @@ Button.propTypes = {
     content: PropTypes.string.isRequired,
     description: PropTypes.object.isRequired,
     column: PropTypes.number.isRequired,
+
+    admin: PropTypes.bool.isRequired,
 };
 
 export default Button;
