@@ -42,7 +42,9 @@ export const getComponents = () => {
             dispatch(receivedData(json));
 
             // Set the site title
-            document.title = json.defaults.title;
+            if (json.defaults.title && json.defaults.title != '') {
+                document.title = json.defaults.title;
+            }
         })
         .catch(error => { // Catch any errors
             // Prod not working

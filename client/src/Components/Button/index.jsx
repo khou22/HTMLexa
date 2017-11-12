@@ -8,6 +8,7 @@ import './style.scss';
 
 class Button extends Component {
     openLink() {
+        console.log('Opening link');
         // Open in a new window
         window.open(this.props.description.link, '_blank');
     }
