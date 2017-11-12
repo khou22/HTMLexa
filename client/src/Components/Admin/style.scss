@@ -1,8 +1,8 @@
 .admin {
     width: 100vw;
     height: 30px;
-    
-    margin-top: -20px;
+
+    margin-top: -22px;
     transition: margin 250ms;
 
     // Animation on entrance
@@ -26,6 +26,6 @@
         margin-top: 0;
     }
     100% {
-        margin-top: -20px;
+        margin-top: -22px;
     }
 }
