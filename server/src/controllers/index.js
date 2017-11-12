@@ -7,6 +7,7 @@ import schema from '../data/schema';
 
 // Development data schemas
 import sampleSchemaData from '../data/sampleSchema';
+import sampleSchemaData2 from '../data/sampleSchema2';
 import emptySchemaData from '../data/emptySiteSchema';
 
 // Helper functions
@@ -35,6 +36,10 @@ export const getSchema = (req, res) => {
 // For hardcoded scheme
 export const sampleSchema = (req, res) => {
     res.status(200).send(sampleSchemaData);
+};
+
+export const sampleSchema2 = (req, res) => {
+    res.status(200).send(sampleSchemaData2);
 };
 
 // For hardcoded scheme

@@ -23,10 +23,12 @@ const receivedData = (json) => ({
 export const getComponents = () => {
     const prodURL = '/api/components';
     const testURL = '/api/sample';
+    const testURL1 = '/api/sample-one';
     const testEmpty = '/api/empty';
 
     const currentPathname = window.location.pathname;
-    const url = currentPathname === '/test' ? testURL : prodURL;
+    let url = currentPathname === '/test' ? testURL : prodURL;
+    if (currentPathname === '/test-1') url = testURL1;
 
     // Returning a promise allows you to use the 'dispatch' function in the child scope
     return (dispatch) => {
