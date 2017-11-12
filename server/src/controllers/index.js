@@ -19,12 +19,15 @@ export const getSchema = (req, res) => {
 
     // source file is iso-8859-15 but it is converted to utf-8 automatically
     fetchUrl(url, (error, meta, body) => {
-        // console.log(body.toString());
-        const json = JSON.parse(body.toString()); // Parse into JSON
-        if (json != null) { // JSON parsed
-            res.status(200).send(json);
-        } else { // JSON was unsuccessful
-            res.status(500).send(body.toString()); // JSON failed, so send source
+        try {
+            const json = JSON.parse(body.toString()); // Parse into JSON
+            if (json != null) { // JSON parsed
+                res.status(200).send(json);
+            } else { // JSON was unsuccessful
+                res.status(500).send(body.toString()); // JSON failed, so send source
+            }
+        } catch (error) {
+            res.status(500).send(error);
         }
     });
 };

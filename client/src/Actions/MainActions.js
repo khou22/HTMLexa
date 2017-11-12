@@ -21,14 +21,17 @@ const receivedData = (json) => ({
 });
 
 export const getComponents = () => {
-    const url = '/api/components';
+    const prodURL = '/api/components';
     const testURL = '/api/sample';
     const testEmpty = '/api/empty';
+
+    const currentPathname = window.location.pathname;
+    const url = currentPathname === '/test' ? testURL : prodURL;
 
     // Returning a promise allows you to use the 'dispatch' function in the child scope
     return (dispatch) => {
         // Return the contents of the fetch promise
-        return fetch(testURL, { // See watwg-fetch for docs
+        return fetch(url, { // See watwg-fetch for docs
             credentials: 'same-origin', // If same origin
         }).then(response => response.json()) // Parse response
         .then(json => {
@@ -40,6 +43,9 @@ export const getComponents = () => {
             document.title = json.defaults.title;
         })
         .catch(error => { // Catch any errors
+            // Prod not working
+            window.location = '/test'; // Redirect to working schema
+
             dispatch(actionError(error));
         });
     };
