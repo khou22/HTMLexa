@@ -21,21 +21,28 @@ export const weightToValue = (weight) => {
 // Size goes into a class
 export const buildStyle = (description) => {
     // Style object
+
     const style = {
         // Font Color
         'color': description.textColor != 'default' ? description.textColor : 'inherit',
 
         // Background Color
-        'background-color': description.backgroundColor,
+        'background-color': description.backgroundColor? description.backgroundColor : '',
+    }
 
-        // Font weight
-        'fontWeight': weightToValue(description.font.weight),
+    if (description.font != null) {
+        // If font weight exists
+        if (description.font.weight) {
+            style.fontWeight = weightToValue(description.font.weight);
+        }
 
-        // Font style
-        'font-style': description.font.oblique ? 'italic' : 'inherit',
+        if (description.font.oblique) {
+            style.fontStyle = description.font.oblique ? 'italic' : 'inherit';
+        }
 
-        // Text decoration
-        'text-decoration': description.font.underline ? 'underline' : 'inherit',
+        if (description.font.underline) {
+            style.textDecoration = description.font.underline ? 'underline' : 'inherit';
+        }
     }
 
     return style; // Return master styling
